@@ -16,12 +16,14 @@ import axios from 'axios';
 
 export default function login() {
 
-    axios.post("/login", {email, password})
-    .then()
+    axios.post("/login")
+    .then((res) =>{
+    });
     //button for submit on click
 
     return (
         <div>
+           <h1>login component</h1>
            
         </div>
     )

@@ -1,4 +1,3 @@
-
 module.exports = {
 
   //landing
@@ -31,16 +30,10 @@ module.exports = {
   
   //profile
   deleteFav: async (req, res) => {
-    //delete value based of id from url params
     const db = req.app.get("db");
     const { craft_id } = req.params;
-    let crafts = await db.delete_fav([craft_id]);
-    //find index of message object
-    const deleteFav = crafts.find((crafts) => crafts.id == craft_id);
-    //remove message from the messages array
-    crafts.splice(deleteFav, 1);
-    //return the updated messages array
-    res.status(200).send(crafts);
+    await db.delete_fav([craft_id]);
+    res.status(200).send('success');
   },
 
 };

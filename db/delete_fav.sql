@@ -1,4 +1,4 @@
-DELETE FROM favorites (craft_id)
-VALUES ($1);
+DELETE FROM favorites 
+WHERE craft_id =$1;
 
 

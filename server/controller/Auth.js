@@ -29,5 +29,9 @@ module.exports = {
 
         //error handling goes here if desired ie error account alraedy exists 
         res.status(200).send("Successfully registered");
+    }, 
+
+    logout: async (req, res) => {
+        res.status(200).send("sucessfully logged out")
     }
 };

@@ -26,6 +26,9 @@ app.post('/craft/:user_id/:craft_id', siteHandling.addFav);
 //Profile--delete favorited craft card from profile
 app.delete('/profile/:craft_id', siteHandling.deleteFav);
 
+//Logout
+app.delete('/logout', auth.logout);
+
 //connecting to database using Massive
 massive({
   connectionString: CONNECTION_STRING,
