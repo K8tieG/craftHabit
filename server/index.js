@@ -13,17 +13,18 @@ app.use(express.json());
 
 //Login
 app.post('/login', auth.login);
-//what about signup? 
 
-//Landing--POST request to return a craft from given user input
-app.post('/landing/', siteHandling.createCraft);
+//Register
+app.post('/register',auth.register);
 
-//Craft--favorite an item to profile
-//or is it a PUT because it's creating a favorite
-app.post('/craft/:id', siteHandling.addFav);
+//Landing--GET request to return a craft from given user input
+app.get('/landing/:time/:type', siteHandling.getCraft);
+
+//Craft--POST request to favorite an item to profile
+app.post('/craft/:user_id/:craft_id', siteHandling.addFav);
 
 //Profile--delete favorited craft card from profile
-app.delete('/profile/:id', siteHandling.deleteFav);
+app.delete('/profile/:craft_id', siteHandling.deleteFav);
 
 //connecting to database using Massive
 massive({
