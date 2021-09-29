@@ -5,6 +5,7 @@ module.exports = {
     //make a call query to the db to get existing entry craft will need where clause in db query
     const db = req.app.get("db");
     const { time, type } = req.params;
+    console.log(time,'a string of time off params');
     try{let crafts = await db.return_craft([time, type]);
     //randmonly select 1 item from the returned array math.random
     let randomCraft = crafts[Math.floor(Math.random() * crafts.length)];

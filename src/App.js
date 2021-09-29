@@ -12,25 +12,13 @@ import Profile from './components/Profile/Profile';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/landing">
-              <Landing />
-            </Route>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-          </Switch>
-        </div>
-      </div>
+      <Navbar />
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <Route path="/landing" component={Landing} />
+        <Route path="/profile" component={Profile} />
+      </Switch>
     </Router>
   );
 }

@@ -1,30 +1,41 @@
-//users can create or login to their account
-//can enter email
-//can enter password 
-//can click login button
-//POST request to login 
-
-// login requires:
-// - Login html and Logout html.
-// - Routes to handle the login/logout.
-// - Session to store the user_id etc for logged in user.
-// - Database querying to confirm user is registered user.
-// - Registration to create new user. (Optional, perhaps after MVP.)
-
-import React from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 
-export default function login() {
+export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const handleClick = () =>{
 
-    axios.post("/login")
-    .then((res) =>{
-    });
-    //button for submit on click
 
+    axios
+      .post("login", { email, password })
+      .then((res) => {
+        alert(res.data);
+      });
+}
+    
     return (
-        <div>
-           <h1>login component</h1>
-           
-        </div>
-    )
-};
+      <div className="login">
+        <h1>Login Comp</h1>
+        <form>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            id="password"
+            name="password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </form>
+        <button onClick={handleClick} className="loginBtn">
+          Login
+        </button>
+      </div>
+    );
+}

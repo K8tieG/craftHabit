@@ -1,4 +1,3 @@
-//this is the home page.
 //users can select a time amount from a dropdown menu
 //users can select a craft type from a dropdown menu
 //users can click start craft button to spin up new craft
@@ -10,17 +9,62 @@
 //make a query to the database add time and craft and will auto increment id
 //then res.data
 
-import React from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 
-export default function landing() {
+export default function Landing(props) {
+  const [time, setTime] = useState("");
+  const [type, setType] = useState("");
+  let handleClick = () =>{
+  
+  
+    axios.get(`/landing/${time}/${type}`)
+    .then((res) => {
+      alert(res.data.title);
+    });
+  }
 
-    axios.post("landing/:id").then((res) => {});
-
+ 
     return (
-        <div>
-            <p>This is my home/landing page</p>
-            
-        </div>
-    )
+      <div>
+        <h1>GET CREATIVE</h1>
+        <label> Choose amount of time </label>
+        <select
+          id="time"
+          name="time"
+          value={time}
+          onChange={(e) => setTime(+e.target.value)}
+        >
+          <option value="5">5 </option>
+          <option value="10">10 </option>
+          <option value="15">15 minutes</option>
+          <option value="20">20 minutes</option>
+          <option value="25">25 minutes</option>
+          <option value="30">35 minutes</option>
+          <option value="40">40 minutes</option>
+          <option value="45">45 minutes</option>
+          <option value="50">50 minutes</option>
+          <option value="55">55 minutes</option>
+          <option value="60+">60+ minutes</option>
+        </select>
+        <label> Choose a craft type </label>
+        <select
+          id="type"
+          name="type"
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+        >
+          <option value="Mauris">Mauris</option>
+          <option value="drawing">Drawing</option>
+          <option value="embroidery">Embroidery</option>
+          <option value="knitting">Knitting</option>
+          <option value="macrame">Macrame</option>
+          <option value="origami">Origami</option>
+          <option value="jewllery">Jewllery</option>
+        </select>
+        <button onClick={handleClick} className="craftBtn">
+          Get Crafting
+        </button>
+      </div>
+    );
 };

@@ -1,27 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 
-export default function register() {
-  const email = "";
-  const password ="";
+
+export default function Register (props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const handleClick = () =>{
 
-    axios.post("/register", { email, password })
-    .then((res) => {
-      alert(res.data);
-    });
+    axios
+      .post("/register", { email, password })
+      .then((res) => {
+        alert(res.data);
+      });
     
   }
 
   return (
-
     <div className="register">
       <h1>Register Comp</h1>
-      <form action="">
-        <input type="text" name="email" id="email"/>
-        <input type="password" name="password" id="password"/>
+      <form >
+        <input
+          id="email"
+          name="email"
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          id="password"
+          name="password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
       </form>
-      <button onClick={handleClick} className="regBtn">Register</button>
+      <button onClick={handleClick} className="regBtn">
+        Register
+      </button>
     </div>
   );
     
