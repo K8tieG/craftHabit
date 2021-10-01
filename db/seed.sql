@@ -36,18 +36,19 @@ CREATE TABLE "favorites" (
 
 INSERT INTO users (email,password)
 VALUES
-  ('porttitor.eros.nec@urnanunc.net','laoreet'),
-  ('nascetur.ridiculus@etmagnis.edu','egestas.'),
+  ('test@test.net','12345'),
+  ('bananas@gmail.com','pizza'),
   ('maecenas.iaculis@nonlorem.com','arcu.'),
   ('dis.parturient@vestibulumnec.net','nulla'),
   ('mollis.non.cursus@dolor.com','eget');
 
 INSERT INTO crafts (title,time,type,supplies,instructions,craft_img)
 VALUES
-  ('Aliquam nisl. Nulla',5,'Mauris','lobortis mauris. Suspendisse aliquet','ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis','https://www.freeimages.com/photo/tropical-bird-1390996'),
-  ('Nulla semper tellus',10,'senectus','eu, ligula. Aenean euismod','diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus','https://www.freeimages.com/photo/tropical-bird-1390996'),
-  ('volutpat nunc sit',15,'auctor','a neque.','Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue','https://www.freeimages.com/photo/tropical-bird-1390996'),
-  ('dapibus gravida. Aliquam',20,'dapibus','sit amet','arcu. Vestibulum ante ipsum primis in faucibus','https://www.freeimages.com/photo/tropical-bird-1390996'),
-  ('non, hendrerit id,',25,'lacus,','Phasellus','ultrices. Duis volutpat nunc sit amet metus. Aliquam','https://www.freeimages.com/photo/tropical-bird-1390996');
-
+  ('Knitting a blanket',5,'knitting','lobortis mauris. Suspendisse aliquet','ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis','https://www.freeimages.com/photo/tropical-bird-1390996'),
+  ('Knitting a hat',5,'knitting','lobortis mauris. Suspendisse aliquet','ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis','https://www.freeimages.com/photo/tropical-bird-1390996'),
+  ('Making earrings',10,'jewelry','eu, ligula. Aenean euismod','diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus','https://www.freeimages.com/photo/tropical-bird-1390996'),
+  ('Draw a bear',15,'drawing','a neque.','Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue','https://www.freeimages.com/photo/tropical-bird-1390996'),
+  ('Embroider a t-shirt',20,'embroidery','sit amet','arcu. Vestibulum ante ipsum primis in faucibus','https://www.freeimages.com/photo/tropical-bird-1390996'),
+  ('Make a paper heart',25,'oragami','Phasellus','ultrices. Duis volutpat nunc sit amet metus. Aliquam','https://www.freeimages.com/photo/tropical-bird-1390996'),
+  ('make a blanket', 30, 'crochet', 'needle and yarn', 'loop and start going and making it nice', 'https://www.freeimages.com/photo/tropical-bird-1390996');
 

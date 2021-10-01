@@ -24,7 +24,6 @@ export default function Landing(props) {
     });
   }
 
- 
     return (
       <div>
         <h1>GET CREATIVE</h1>
@@ -33,9 +32,9 @@ export default function Landing(props) {
           id="time"
           name="time"
           value={time}
-          onChange={(e) => setTime(+e.target.value)}
+          onChange={(e) => setTime(e.target.value)}
         >
-          <option value="5">5 </option>
+          <option value="5">5</option>
           <option value="10">10 </option>
           <option value="15">15 minutes</option>
           <option value="20">20 minutes</option>
@@ -54,13 +53,13 @@ export default function Landing(props) {
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
-          <option value="Mauris">Mauris</option>
-          <option value="drawing">Drawing</option>
-          <option value="embroidery">Embroidery</option>
-          <option value="knitting">Knitting</option>
-          <option value="macrame">Macrame</option>
-          <option value="origami">Origami</option>
-          <option value="jewllery">Jewllery</option>
+          <option value="crochet">crochet</option>
+          <option value="drawing">drawing</option>
+          <option value="embroidery">embroidery</option>
+          <option value="knitting">knitting</option>
+          <option value="macrame">macrame</option>
+          <option value="origami">origami</option>
+          <option value="jewelry">jewelry</option>
         </select>
         <button onClick={handleClick} className="craftBtn">
           Get Crafting

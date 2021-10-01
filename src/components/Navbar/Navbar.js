@@ -3,17 +3,38 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
+export default function Navbar(props) {
 
+  const handleClick = () =>{
+    axios.delete("/logout")
+    .then((res) => {
+    props.handleUserId(null)
+    console.log(window);
+    window.location.pathname = "/login";
+})
+  };
 
-export default function Navbar() {
     return (
       <div className="navbar">
         <h1>Craft Habit</h1>
-        <Link to="/login">Login</Link> <br />
-        <Link to="/register">Register</Link> <br />
-        <Link to="/landing">Choose a Craft</Link> <br />
-        <Link to="/profile">Profile</Link>
+        {!props.userId && (
+          <>
+            <Link to="/login">Login</Link> <br />
+            <Link to="/register">Register</Link> <br />
+          </>
+        )}
+        {props.userId && (
+          <>
+            <Link to="/landing">Choose a Craft</Link> <br />
+            <Link to="/profile">Profile</Link> <br />
+            {/* <Link to="/logout">Logout</Link> */}
+            <button onClick={handleClick} className="logoutBtn">
+              Logout
+            </button>
+          </>
+        )}
       </div>
     );
 };

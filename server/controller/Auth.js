@@ -10,13 +10,13 @@ module.exports = {
         if (userData.email === email){
             if(userData.password === password){
                 //return a success response 
-                res.status(200).send("Successfully logged in");
+                res.status(200).send(userData);
                 //sending up all user data to front, later can slim down what is sent to the user to view after login
             } else {
-                return res.status(404).send("Incorrect email or password")
+                return res.status(200).send("Incorrect email or password")
             } } else {
-                res.status(404).send("Incorrect email or password")
-            } 
+                res.status(200).send("Incorrect email or password")
+            }
         // console.log(userData);
 
         // res.status(200).send("this is a test");
@@ -26,9 +26,10 @@ module.exports = {
         const db = req.app.get("db")
         const {email, password} = req.body;
         const [newUser] = await db.new_account([email, password])
-
-        //error handling goes here if desired ie error account alraedy exists 
-        res.status(200).send("Successfully registered");
+            res.status(200).send("Successfully registered");
+            //not handling if a user is already registered
+        
+      
     }, 
 
     logout: async (req, res) => {

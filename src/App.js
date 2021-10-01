@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -9,12 +9,23 @@ import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 
 
+
 function App() {
+  const [userId, setUserId] = useState(null);
+
+  const handleUserId = (userId) => {
+    setUserId(userId) 
+  };
+  // console.log(userId);
+  
   return (
     <Router>
-      <Navbar />
+      <Navbar userId={userId} handleUserId={handleUserId} />
       <Switch>
-        <Route path="/login" component={Login} />
+        <Route
+          path="/login"
+          render={(props) => <Login {...props} handleUserId={handleUserId} />}
+        />
         <Route path="/register" component={Register} />
         <Route path="/landing" component={Landing} />
         <Route path="/profile" component={Profile} />

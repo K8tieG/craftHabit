@@ -10,9 +10,9 @@ export default function Register (props) {
     axios
       .post("/register", { email, password })
       .then((res) => {
+        console.log(res);
         alert(res.data);
       });
-    
   }
 
   return (
