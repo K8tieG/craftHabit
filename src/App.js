@@ -8,8 +8,6 @@ import Landing from './components/Landing/Landing';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 
-
-
 function App() {
   const [userId, setUserId] = useState(null);
 
@@ -27,7 +25,10 @@ function App() {
           render={(props) => <Login {...props} handleUserId={handleUserId} />}
         />
         <Route path="/register" component={Register} />
-        <Route path="/landing" component={Landing} />
+        <Route
+          path="/landing"
+          render={(props) => <Landing {...props} handleUserId={handleUserId} userId={userId} />}
+        />
         <Route path="/profile" component={Profile} />
       </Switch>
     </Router>

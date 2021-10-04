@@ -11,59 +11,68 @@
 
 import React, {useState} from 'react';
 import axios from 'axios';
+import Craft from '../Craft/Craft';
+
 
 export default function Landing(props) {
   const [time, setTime] = useState("");
   const [type, setType] = useState("");
-  let handleClick = () =>{
-  
-  
-    axios.get(`/landing/${time}/${type}`)
+  const [isCraft, setIsCraft] = useState(false);
+  const [craftCard, setCraftCard] = useState([]);
+  let handleClick = () => {
+    
+    axios
+    .get(`/landing/${time}/${type}`)
     .then((res) => {
-      alert(res.data.title);
+      setIsCraft(true);
+      setCraftCard(res.data);
     });
-  }
 
+  };
+  
     return (
       <div>
-        <h1>GET CREATIVE</h1>
-        <label> Choose amount of time </label>
-        <select
-          id="time"
-          name="time"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-        >
-          <option value="5">5</option>
-          <option value="10">10 </option>
-          <option value="15">15 minutes</option>
-          <option value="20">20 minutes</option>
-          <option value="25">25 minutes</option>
-          <option value="30">35 minutes</option>
-          <option value="40">40 minutes</option>
-          <option value="45">45 minutes</option>
-          <option value="50">50 minutes</option>
-          <option value="55">55 minutes</option>
-          <option value="60+">60+ minutes</option>
-        </select>
-        <label> Choose a craft type </label>
-        <select
-          id="type"
-          name="type"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <option value="crochet">crochet</option>
-          <option value="drawing">drawing</option>
-          <option value="embroidery">embroidery</option>
-          <option value="knitting">knitting</option>
-          <option value="macrame">macrame</option>
-          <option value="origami">origami</option>
-          <option value="jewelry">jewelry</option>
-        </select>
-        <button onClick={handleClick} className="craftBtn">
-          Get Crafting
-        </button>
+        {isCraft ? (
+          <div className="craft">
+            <Craft craftCard={craftCard} userId={props.userId} />
+          </div>
+        ) : (
+        <div className="getCraft">
+          <h1>GET CREATIVE</h1>
+          <label> Choose amount of time </label>
+          <select
+            id="time"
+            name="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            >
+            <option value="10">10 minutes </option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="35">35 minutes</option>
+          </select>
+          <label> Choose a craft type </label>
+          <select
+            id="type"
+            name="type"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            >
+            <option value="origami">origami</option>
+            <option value="drawing">drawing</option>
+            <option value="embroidery">embroidery</option>
+            <option value="yarn">yarn</option>
+            <option value="macrame">macrame</option>
+            <option value="crochet">crochet</option>
+            <option value="jewelry">jewelry</option>
+          </select>
+          <button onClick={handleClick} className="craftBtn">
+            Get Crafting
+          </button>
+        </div>
+            )}
       </div>
     );
 };
