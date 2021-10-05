@@ -16,12 +16,12 @@ export default function Craft(props) {
     .post(`/craft/${props.userId}/${props.craftCard.craft_id}`)
     .then((res) =>{
      alert("favorite added");
+     console.log(props.userId)
     });
   };
  
   return (
     <div>
-      {console.log(props)};
       <h1>{props.craftCard.title}</h1>
       <div className="craftImg">
         <img src={props.craftCard.craft_img} alt="" />

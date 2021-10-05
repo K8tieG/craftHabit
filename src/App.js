@@ -11,10 +11,12 @@ import Profile from './components/Profile/Profile';
 function App() {
   const [userId, setUserId] = useState(null);
 
+  // useEffect(()=>{
+  //   console.log(userId,"from app use effect");
+  // },[]);
   const handleUserId = (userId) => {
     setUserId(userId) 
   };
-  // console.log(userId);
   
   return (
     <Router>
@@ -27,9 +29,16 @@ function App() {
         <Route path="/register" component={Register} />
         <Route
           path="/landing"
-          render={(props) => <Landing {...props} handleUserId={handleUserId} userId={userId} />}
+          render={(props) => (
+            <Landing {...props} handleUserId={handleUserId} userId={userId} />
+          )}
         />
-        <Route path="/profile" component={Profile} />
+        <Route
+          path="/profile"
+          render={(props) => (
+            <Profile {...props} handleUserId={handleUserId} userId={userId} />
+          )}
+        />
       </Switch>
     </Router>
   );

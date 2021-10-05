@@ -4,6 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+// import "./Navbar.css";
 
 export default function Navbar(props) {
 
@@ -18,23 +19,27 @@ export default function Navbar(props) {
 
     return (
       <div className="navbar">
-        <h1>Craft Habit</h1>
-        {!props.userId && (
-          <>
-            <Link to="/login">Login</Link> <br />
-            <Link to="/register">Register</Link> <br />
-          </>
-        )}
-        {props.userId && (
-          <>
-            <Link to="/landing">Choose a Craft</Link> <br />
-            <Link to="/profile">Profile</Link> <br />
-            {/* <Link to="/logout">Logout</Link> */}
-            <button onClick={handleClick} className="logoutBtn">
-              Logout
-            </button>
-          </>
-        )}
+        <div className="logo">
+          <h1>Craft Habit</h1>
+        </div>
+        <div className="links">
+          {!props.userId && (
+            <>
+              <Link className="firstView" to="/register">Register</Link><br />
+              <Link className="firstView" to="/login">Login</Link><br />
+            </>
+          )}
+          {props.userId && (
+            <>
+              <Link to="/landing">Choose a Craft</Link> <br />
+              <Link to="/profile">Profile</Link> <br />
+              {/* <Link to="/logout">Logout</Link> */}
+              <button onClick={handleClick} className="logoutBtn">
+                Logout
+              </button>
+            </>
+          )}
+        </div>
       </div>
     );
 };

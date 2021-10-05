@@ -15,6 +15,7 @@ export default function Login(props) {
         props.handleUserId(res.data.user_id)
         props.history.push('./landing');
         alert(`welcome, ${res.data.email}`);
+        console.log(res.data.user_id);
       })
       //for handling 404 network errors 
       // .catch((error) => {
@@ -24,6 +25,7 @@ export default function Login(props) {
     
     return (
       <div className="login">
+        <div className='logForm'>
         <form>
           <input
             id="email"
@@ -45,6 +47,7 @@ export default function Login(props) {
           <button onClick={handleClick} className="loginBtn">
             Login
           </button>
+        </div>
       </div>
     );
 }

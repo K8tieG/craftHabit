@@ -25,7 +25,7 @@ app.post('/craft/:user_id/:craft_id', siteHandling.addFav);
 
 //Profile--delete favorited craft card from profile
 app.get('/profile/:user_id', siteHandling.showFavs);
-app.delete('/profile/:craft_id', siteHandling.deleteFav);
+app.delete('/profile/:craft_id/:user_id', siteHandling.deleteFav);
 
 //Logout
 app.delete('/logout', auth.logout);

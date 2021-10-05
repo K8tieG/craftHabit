@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import "./Register.css";
 
 
 export default function Register (props) {
@@ -17,10 +18,10 @@ export default function Register (props) {
 
   return (
     <div className="register">
-      <h1>Register Comp</h1>
-      <form >
+      <form className="regFrom">
         <input
           id="email"
+          placeholder="email"
           name="email"
           type="text"
           value={email}
@@ -28,6 +29,7 @@ export default function Register (props) {
         />
         <input
           id="password"
+          placeholder="password"
           name="password"
           type="password"
           value={password}

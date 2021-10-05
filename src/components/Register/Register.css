@@ -1,0 +1,61 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.75;
+    width:100vw;
+    height: 100vh;
+}
+
+input {
+   display: flex;
+   flex-direction: column;
+   width: 25vw;
+   padding: 15px;
+   margin: 15px;
+   border: none;
+   border-radius: 20px;
+   background-color: #8AA2A9;
+   color:black;
+   outline: none;
+}
+
+input::placeholder{
+  color:white;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+input:focus {
+  border: 3px solid white;
+}
+
+.regBtn {
+  
+   padding: 15px;
+   margin: 5px;
+   border: none;
+   border-radius: 20px;
+   background-color: white;
+   color:black;
+   text-align:center;
+   font-size: 1.5em;
+   font-weight: bold;
+   cursor: pointer;
+
+}
+.regBtn:hover {
+    background-color: #8AA2A9;
+    color:white;
+}
+
+.regForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}

@@ -44,9 +44,13 @@ module.exports = {
 
   deleteFav: async (req, res) => {
     const db = req.app.get("db");
-    const { craft_id } = req.params;
-    await db.delete_fav([craft_id]);
-    res.status(200).send('success');
+    try{
+      const { craft_id, user_id} = req.params;
+      let favorites = await db.delete_fav([craft_id, user_id]);
+      res.status(200).send(favorites);
+    } catch (e) {
+      console.log(e);
+    }
   },
 
 };
