@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import "./Login.css"
 
 export default function Login(props) {
     const [email, setEmail] = useState("");
@@ -23,10 +24,10 @@ export default function Login(props) {
     
     return (
       <div className="login">
-        <h1>Login Comp</h1>
         <form>
           <input
             id="email"
+            placeholder="email"
             name="email"
             type="text"
             value={email}
@@ -34,15 +35,16 @@ export default function Login(props) {
           />
           <input
             id="password"
+            placeholder="password"
             name="password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </form>
-        <button onClick={handleClick} className="loginBtn">
-          Login
-        </button>
+          <button onClick={handleClick} className="loginBtn">
+            Login
+          </button>
       </div>
     );
 }

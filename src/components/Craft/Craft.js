@@ -19,7 +19,6 @@ export default function Craft(props) {
     });
   };
  
-
   return (
     <div>
       {console.log(props)};

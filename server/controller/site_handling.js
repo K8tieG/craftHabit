@@ -31,6 +31,17 @@ module.exports = {
   },
   
   //profile
+  showFavs: async (req, res) => {
+    const db = req.app.get("db");
+    try {
+      const {user_id} = req.params;
+      let favorites = await db.show_favs([user_id]);
+      res.status(200).send(favorites);
+    } catch (e) {
+      console.log(e);
+    }
+  },
+
   deleteFav: async (req, res) => {
     const db = req.app.get("db");
     const { craft_id } = req.params;

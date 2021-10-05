@@ -7,20 +7,30 @@
 
 //show all favorites--use get request 
 
-import React from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 
-export default function Profile() {
+export default function Profile(props) {
+const [userId, setUserId] = useState("")
 
 const handleClick = () => {
+
   axios
-  .delete('/profile/craft_id')
-  .then((res) => {});
+    .get(`/profile/${userId}`)
+    .delete("/profile/craft_id")
+    .then((res) => {
+        setUserId(res.data);
+
+    });
 };
- 
+
+
     return (
       <div>
-        <h1>Title</h1>
+          <h1>Profile Component</h1>
+        <div className="title">
+        <p>title</p>
+        </div>
         <div className="craftImg">
           <p>craft image</p>
         </div>
