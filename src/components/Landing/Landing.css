@@ -3,16 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("https://images.unsplash.com/photo-1550376026-7375b92bb318?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=708&q=80") no-repeat center center fixed;
+    background: url("https://images.unsplash.com/photo-1573227896288-1d51c740a96e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80") no-repeat center center fixed;
     background-size: cover;
     opacity: 0.75;
     width:100vw;
     height: 100vh;
 }
+
 .inputs{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .pageTitle {
     color:white;
@@ -22,6 +24,41 @@
 label {
     color: white;
     font-weight: bold;
-    padding:25px;
+    font-size: 30px;
+    margin-bottom: 15px;
+    width: 25vw;
+    text-align: center;
+  
+}
+
+select{
+    background-color: #90BAAD;
+    height: 50px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    border: solid 2px white;
     font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width:350px;
+}
+
+.craftBtn {
+   padding: 10px;
+   width: 150px;
+   margin: 5px;
+   border: none;
+   border-radius: 20px;
+   background-color: white;
+   color:black;
+   text-align:center;
+   font-size: 1.5em;
+   font-weight: bold;
+   cursor: pointer;
+   border: 2px solid #90BAAD;
+}
+.craftBtn:hover {
+    background-color: #90BAAD;
+    color:white;
+    border: 2px solid white;
 }

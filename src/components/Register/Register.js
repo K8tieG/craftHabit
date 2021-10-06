@@ -18,6 +18,7 @@ export default function Register (props) {
 
   return (
     <div className="register">
+      <h1 className="pageTitle">Craft Habit</h1>
       <form className="regFrom">
         <input
           id="email"

@@ -7,6 +7,7 @@
 
 import React from 'react';
 import axios from 'axios';
+import "./Craft.css";
 
 export default function Craft(props) {
   
@@ -21,23 +22,28 @@ export default function Craft(props) {
   };
  
   return (
-    <div>
-      <h1>{props.craftCard.title}</h1>
+    <div className="craftBox">
       <div className="craftImg">
         <img src={props.craftCard.craft_img} alt="" />
       </div>
+      <div className="title">
+        <h1>{props.craftCard.title}</h1>
+      </div>
       <div className="materials">
-        <p>
-          Materials: {props.craftCard.materials}
-        </p>
+        <h2>Materials</h2>
+        <p>{props.craftCard.materials}</p>
       </div>
       <div className="tools">
-        <p>Tools: {props.craftCard.tools}</p>
+        <h2>Tools</h2>
+        <p>{props.craftCard.tools}</p>
       </div>
       <div className="instructions">
-        <p>Instructions: {props.craftCard.instructions}</p>
+        <h2>Instructions</h2>
+        <p>{props.craftCard.instructions}</p>
       </div>
-      <button onClick={handleClick} className="favBtn">Favorite</button>
+      <button onClick={handleClick} className="favBtn">
+        Favorite
+      </button>
     </div>
   );
 }

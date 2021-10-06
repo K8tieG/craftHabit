@@ -1,0 +1,58 @@
+.craft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.craftBox {
+    
+    /* background: url("https://images.unsplash.com/photo-1517146783983-418c681b56c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80") no-repeat center center fixed; */
+    /* background-size: cover;
+    opacity: 0.75; */
+}
+.craftImg{
+    display: flex;
+    justify-content:center;
+}
+img {
+    width:500px;
+    height: 500px;
+    border-radius: 20px;
+    margin:5px;
+    box-shadow:0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.title{
+    display: flex;
+    justify-content:center;
+
+}
+.materials{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   border: 5px solid black;
+    border-radius: 20px;
+    margin: 50px;
+}.tools{
+    display: flex;
+    justify-content:center;
+    background-color: tomato;
+   padding: 10px 75px;
+   border: 5px solid black;
+border-radius: 20px;
+}
+.instructions{
+    display: flex;
+    justify-content:center;
+   padding: 10px 75px;
+   border: 5px solid black;
+    border-radius: 20px;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+}

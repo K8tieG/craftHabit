@@ -14,7 +14,7 @@ export default function Login(props) {
       .then((res) => {
         props.handleUserId(res.data.user_id)
         props.history.push('./landing');
-        alert(`welcome, ${res.data.email}`);
+        // alert(`welcome, ${res.data.email}`);
         console.log(res.data.user_id);
       })
       //for handling 404 network errors 
@@ -25,25 +25,26 @@ export default function Login(props) {
     
     return (
       <div className="login">
-        <div className='logForm'>
-        <form>
-          <input
-            id="email"
-            placeholder="email"
-            name="email"
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            id="password"
-            placeholder="password"
-            name="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </form>
+        <h1 className="pageTitle">Craft Habit</h1>
+        <div className="logForm">
+          <form>
+            <input
+              id="email"
+              placeholder="email"
+              name="email"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              id="password"
+              placeholder="password"
+              name="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </form>
           <button onClick={handleClick} className="loginBtn">
             Login
           </button>
