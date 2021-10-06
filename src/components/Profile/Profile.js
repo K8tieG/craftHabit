@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import "./Profile.css";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 export default function Profile(props) {
   const [craftCard, setCraftCard] = useState([]);
@@ -25,7 +26,7 @@ export default function Profile(props) {
       .delete(`/profile/${craftCard[key].craft_id}/${props.userId}`)
       .then((res) => {
         setCraftCard(res.data);
-        alert("craft removed");
+        // alert("craft removed");
       });
   };
 
@@ -51,7 +52,7 @@ export default function Profile(props) {
                       onClick={(e) => handleClick(key, e)}
                       className="delBtn"
                     >
-                      X
+                     <AiFillHeart className="delFav"/>
                     </button>
                     <div className="time">
                       <p>{el.time} min</p>

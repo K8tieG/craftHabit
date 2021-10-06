@@ -7,6 +7,7 @@
 
 import React from 'react';
 import axios from 'axios';
+import { AiOutlineHeart } from 'react-icons/ai';
 import "./Craft.css";
 
 export default function Craft(props) {
@@ -42,7 +43,7 @@ export default function Craft(props) {
         <p>{props.craftCard.instructions}</p>
       </div>
       <button onClick={handleClick} className="favBtn">
-        Favorite
+        <AiOutlineHeart className="favHeart"/> Favorite
       </button>
     </div>
   );

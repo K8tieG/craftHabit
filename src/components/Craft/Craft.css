@@ -66,6 +66,9 @@ h2 {
 }
 
 .favBtn {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
    padding: 10px;
    width: 125px;
    border: none;
@@ -83,4 +86,7 @@ h2 {
     border:none;
     background-color: #8AA2A9;
     color:white;
+}
+.favHeart{
+  font-size: 25px;
 }

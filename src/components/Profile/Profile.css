@@ -49,21 +49,26 @@
 }
 
 .delBtn {
-    padding: 10px;
-   border: none;
-   border-radius: 50%;
-   background-color: #8AA2A9;
+    padding: 2px; 
+   /* background-color: #8AA2A9;
     color:white;
    text-align:center;
    font-size: 16px;
    font-weight: bold;
+   margin-top: 5px; */
    cursor: pointer;
-   border: 2px solid black;
-   margin-top: 5px;
+   /* border: 2px solid black; */
+   /* border-radius: 50%; */
+   border: none;
+   background-color: white;
 }
 
 .delBtn:hover {
     border:2px solid #8AA2A9;
     background-color: white;
    color:black;
+}
+
+.delFav{
+    font-size: 25px;
 }

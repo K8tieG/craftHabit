@@ -6,7 +6,7 @@ import Welcome from './components/Welcome/Welcome';
 import Login from './components/Login /Login';
 import Register from './components/Register/Register';
 import Landing from './components/Landing/Landing';
-import Navbar from './components/Navbar/Navbar';
+// import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 
 function App() {
