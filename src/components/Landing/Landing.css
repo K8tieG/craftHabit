@@ -1,15 +1,18 @@
 .getCraft {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: url("https://images.unsplash.com/photo-1573227896288-1d51c740a96e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80") no-repeat center center fixed;
     background-size: cover;
     opacity: 0.75;
     width:100vw;
     height: 100vh;
+    margin-left: 250px;
+    margin-right: 0;
 }
-
+.box{
+    margin-right: 250px;
+}
 .inputs{
     display: flex;
     flex-direction: column;
@@ -19,6 +22,8 @@
 .pageTitle {
     color:white;
     font-size: 72px;
+    margin-right: 250px;
+    margin-top: 150px;
 }
 
 label {

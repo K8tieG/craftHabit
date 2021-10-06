@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import Welcome from './components/Welcome/Welcome';
 import Login from './components/Login /Login';
 import Register from './components/Register/Register';
 import Landing from './components/Landing/Landing';
@@ -20,6 +21,7 @@ function App() {
   
   return (
     <Router>
+      {/* <Welcome /> */}
       <Navbar userId={userId} handleUserId={handleUserId} />
       <Switch>
         <Route

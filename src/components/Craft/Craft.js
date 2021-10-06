@@ -30,15 +30,15 @@ export default function Craft(props) {
         <h1>{props.craftCard.title}</h1>
       </div>
       <div className="materials">
-        <h2>Materials</h2>
+        <h2>Materials:</h2>
         <p>{props.craftCard.materials}</p>
       </div>
       <div className="tools">
-        <h2>Tools</h2>
+        <h2>Tools:</h2>
         <p>{props.craftCard.tools}</p>
       </div>
       <div className="instructions">
-        <h2>Instructions</h2>
+        <h2>Instructions:</h2>
         <p>{props.craftCard.instructions}</p>
       </div>
       <button onClick={handleClick} className="favBtn">

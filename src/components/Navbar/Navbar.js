@@ -4,7 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import "./Navbar.css";
+import "./Navbar.css";
 
 export default function Navbar(props) {
 
@@ -19,20 +19,32 @@ export default function Navbar(props) {
 
     return (
       <div className="navbar">
-        <div className="logo">
+        <div className="navLogo">
           <h1>Craft Habit</h1>
         </div>
-        <div className="links">
+        <div className="nav-link-box">
           {!props.userId && (
             <>
-              <Link className="firstView" to="/register">Register</Link><br />
-              <Link className="firstView" to="/login">Login</Link><br />
+              <Link className="navText" to="/register">
+                Register
+              </Link>
+              <br />
+              <Link className="navText" to="/login">
+                Login
+              </Link>
+              <br />
             </>
           )}
           {props.userId && (
             <>
-              <Link to="/landing">Choose a Craft</Link> <br />
-              <Link to="/profile">Profile</Link> <br />
+              <Link className="navText" to="/landing">
+                Choose a Craft
+              </Link>{" "}
+              <br />
+              <Link className="navText" to="/profile">
+                Profile
+              </Link>{" "}
+              <br />
               {/* <Link to="/logout">Logout</Link> */}
               <button onClick={handleClick} className="logoutBtn">
                 Logout
