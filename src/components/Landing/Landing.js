@@ -12,6 +12,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import Craft from '../Craft/Craft';
+import Navbar from '../Navbar/Navbar';
 import "./Landing.css"
 
 
@@ -33,6 +34,7 @@ export default function Landing(props) {
   
     return (
       <div>
+        <Navbar />
         {isCraft ? (
           <div className="craft">
             <Craft craftCard={craftCard} userId={props.userId} />

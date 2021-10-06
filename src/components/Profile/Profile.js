@@ -5,6 +5,8 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "../Navbar/Navbar";
+import "./Profile.css";
 
 export default function Profile(props) {
   const [craftCard, setCraftCard] = useState([]);
@@ -28,31 +30,39 @@ export default function Profile(props) {
   };
 
   return (
-    <div className="returnDiv">
-      {isLoading ? (
-        <p>Loading</p>
-      ) : (
-        <div className="falsDiv">
-          {craftCard.map((el, key) => {
-            return (
-              <div className="mapDiv">
-                <div className="title">
-                  <p>{el.title}</p>
+    <div>
+      <Navbar />
+      <div className="returnDiv">
+        {isLoading ? (
+          <p>Loading</p>
+        ) : (
+          <div className="container">
+            {craftCard.map((el, key) => {
+              return (
+                <div className="mapDiv">
+                  <div className="craftImg">
+                    <img className="favImg" src={el.craft_img} alt="" />
+                  </div>
+                  <div className="title">
+                    <p>{el.title}</p>
+                  </div>
+                  <div className="timeRow">
+                    <button
+                      onClick={(e) => handleClick(key, e)}
+                      className="delBtn"
+                    >
+                      X
+                    </button>
+                    <div className="time">
+                      <p>{el.time} min</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="craftImg">
-                  <img src={el.craft_img} alt="" />
-                </div>
-                <div className="time">
-                  <p>{el.time}</p>
-                </div>
-                <button onClick={(e) => handleClick(key, e)} className="favBtn">
-                  Remove Favorite
-                </button>
-              </div>
-            );
-          })}
-        </div>
-      )}
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

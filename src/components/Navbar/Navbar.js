@@ -11,7 +11,7 @@ export default function Navbar(props) {
   const handleClick = () =>{
     axios.delete("/logout")
     .then((res) => {
-    props.handleUserId(null)
+    // props.handleUserId(null)
     console.log(window);
     window.location.pathname = "/login";
 })
@@ -23,20 +23,6 @@ export default function Navbar(props) {
           <h1>Craft Habit</h1>
         </div>
         <div className="nav-link-box">
-          {!props.userId && (
-            <>
-              <Link className="navText" to="/register">
-                Register
-              </Link>
-              <br />
-              <Link className="navText" to="/login">
-                Login
-              </Link>
-              <br />
-            </>
-          )}
-          {props.userId && (
-            <>
               <Link className="navText" to="/landing">
                 Choose a Craft
               </Link>{" "}
@@ -45,12 +31,9 @@ export default function Navbar(props) {
                 Profile
               </Link>{" "}
               <br />
-              {/* <Link to="/logout">Logout</Link> */}
               <button onClick={handleClick} className="logoutBtn">
                 Logout
               </button>
-            </>
-          )}
         </div>
       </div>
     );

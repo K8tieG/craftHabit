@@ -18,6 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .pageTitle {
     color:white;
@@ -46,6 +47,7 @@ select{
     font-weight: bold;
     text-align: center;
     width:350px;
+    
 }
 
 .craftBtn {
@@ -61,6 +63,7 @@ select{
    font-weight: bold;
    cursor: pointer;
    border: 2px solid #90BAAD;
+   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .craftBtn:hover {
     background-color: #90BAAD;

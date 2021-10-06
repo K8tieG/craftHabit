@@ -21,6 +21,7 @@ input {
    background-color: #8AA2A9;
    color:black;
    outline: none;
+   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 input::placeholder{
@@ -45,6 +46,7 @@ input:focus {
    font-size: 1.5em;
    font-weight: bold;
    cursor: pointer;
+   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 .regBtn:hover {
