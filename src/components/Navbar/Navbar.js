@@ -13,7 +13,7 @@ export default function Navbar(props) {
     .then((res) => {
     // props.handleUserId(null)
     console.log(window);
-    window.location.pathname = "/login";
+    window.location.pathname = ("/");
 })
   };
 

@@ -7,12 +7,12 @@
 
 import React from 'react';
 import axios from 'axios';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineHeart , AiFillHeart } from 'react-icons/ai';
 import "./Craft.css";
 
 export default function Craft(props) {
   
-  const handleClick = () =>{
+  const handleClick = () => {  
 
     axios
     .post(`/craft/${props.userId}/${props.craftCard.craft_id}`)
@@ -43,7 +43,7 @@ export default function Craft(props) {
         <p>{props.craftCard.instructions}</p>
       </div>
       <button onClick={handleClick} className="favBtn">
-        <AiOutlineHeart className="favHeart"/> Favorite
+        <AiOutlineHeart className="favHeart" /> Favorite
       </button>
     </div>
   );

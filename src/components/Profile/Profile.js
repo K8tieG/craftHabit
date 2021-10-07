@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import "./Profile.css";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 export default function Profile(props) {
   const [craftCard, setCraftCard] = useState([]);
@@ -52,7 +52,7 @@ export default function Profile(props) {
                       onClick={(e) => handleClick(key, e)}
                       className="delBtn"
                     >
-                     <AiFillHeart className="delFav"/>
+                      <FaRegTrashAlt className="delFav" />
                     </button>
                     <div className="time">
                       <p>{el.time} min</p>

@@ -25,7 +25,7 @@ export default function Login(props) {
     
     return (
       <div className="login">
-        <h1 className="pageTitle">Craft Habit</h1>
+        <h1 className="loginTitle">Craft Habit</h1>
         <div className="logForm">
           <form>
             <input

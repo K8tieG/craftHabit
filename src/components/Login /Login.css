@@ -60,6 +60,8 @@ input:focus {
   
 }
 
-.pageTitle{
-  margin-left: 250px;
+.loginTitle{
+  color:white;
+    font-size: 72px;
+    margin-top: 150px;
 }

@@ -20,17 +20,17 @@ function App() {
     <Router>
       {/* <Navbar userId={userId} handleUserId={handleUserId} /> */}
       <Switch>
-        <Route 
-      path="/"
-      exact
-      render={()=> <Welcome />}
-      />
+        <Route path="/" exact render={() => <Welcome />} />
         <Route
           path="/login"
           exact
           render={(props) => <Login {...props} handleUserId={handleUserId} />}
         />
-        <Route path="/register" component={Register} />
+        <Route
+          path="/register"
+          exact
+          render={(props) => <Register {...props} handleUserId={handleUserId} />}
+        />
         <Route
           path="/landing"
           exact

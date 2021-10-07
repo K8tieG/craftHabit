@@ -1,31 +1,32 @@
 .register {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url("https://images.unsplash.com/photo-1511963118349-e2b22c0efcfc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80") no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.75;
-    width:100vw;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1511963118349-e2b22c0efcfc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80")
+    no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.75;
+  width: 100vw;
+  height: 100vh;
 }
 
 input {
-   display: flex;
-   flex-direction: column;
-   width: 25vw;
-   padding: 15px;
-   margin: 15px;
-   border: none;
-   border-radius: 20px;
-   background-color: #8AA2A9;
-   color:black;
-   outline: none;
-   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  padding: 15px;
+  margin: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #8aa2a9;
+  color: black;
+  outline: none;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-input::placeholder{
-  color:white;
+input::placeholder {
+  color: white;
   font-size: 1.5em;
   font-style: italic;
 }
@@ -35,29 +36,31 @@ input:focus {
 }
 
 .regBtn {
-  
-   padding: 15px;
-   margin: 5px;
-   border: none;
-   border-radius: 20px;
-   background-color: white;
-   color:black;
-   text-align:center;
-   font-size: 1.5em;
-   font-weight: bold;
-   cursor: pointer;
-   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  padding: 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .regBtn:hover {
-    background-color: #8AA2A9;
-    color:white;
+  background-color: #8aa2a9;
+  color: white;
 }
 
-.regForm{
+.regForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  
+}
+
+.regTitle {
+  color: white;
+  font-size: 72px;
+  margin-top: 150px;
 }

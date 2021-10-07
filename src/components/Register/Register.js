@@ -1,24 +1,21 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Register.css";
 
-
-export default function Register (props) {
+export default function Register(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleClick = () =>{
-
-    axios
-      .post("/register", { email, password })
-      .then((res) => {
-        console.log(res);
-        alert(res.data);
-      });
-  }
+  const handleClick = () => {
+    axios.post("/register", { email, password }).then((res) => {
+      console.log(res);
+      props.history.push("./login");
+      alert(res.data);
+    });
+  };
 
   return (
     <div className="register">
-      <h1 className="pageTitle">Craft Habit</h1>
+      <h1 className="regTitle">Craft Habit</h1>
       <form className="regFrom">
         <input
           id="email"
@@ -42,6 +39,4 @@ export default function Register (props) {
       </button>
     </div>
   );
-    
-  
 }
