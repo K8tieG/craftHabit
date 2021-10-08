@@ -9,7 +9,7 @@ export default function Register(props) {
     axios.post("/register", { email, password }).then((res) => {
       console.log(res);
       props.history.push("./login");
-      alert(res.data);
+      // alert(res.data);
     });
   };
 

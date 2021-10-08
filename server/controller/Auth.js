@@ -26,7 +26,7 @@ module.exports = {
         const db = req.app.get("db")
         const {email, password} = req.body;
         const [newUser] = await db.new_account([email, password])
-            res.status(200).send("Successfully registered");
+            res.status(200).send("Sucessfully Registered");
             //not handling if a user is already registered
         
       
